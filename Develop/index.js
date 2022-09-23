@@ -11,7 +11,7 @@ const teamArray = [];
 
 // TODO: CODE GOES HERE
 //questions for manager info
-const managerQestions = [
+const managerQuestions = [
 
     {
         type: "input",
@@ -19,15 +19,15 @@ const managerQestions = [
         message: "What is your team manager's name?",
     },
     {
+        type: "input",
+        name: "email",
+        message: "What is your team manager's email?"
+    },
+    {
 
         type: "input",
         name: "id",
         message: "What is your team manager's ID?",
-    },
-    {
-        type: "input",
-        name: "email",
-        message: "What is your team manager's email?"
     },
     {
         type: "input",
@@ -41,85 +41,85 @@ const engineerQuestions = [
     {
         type: "input",
         name: "engineerName",
-        message: "What is your engineer's name?",
-        validate: (name) => {
-            if (!name) {
-                console.log("must enter a name");
-                return false;
-            } else {
-                return true;
-            }
-        },
-        when: ({ membertype }) => {
-            if (membertype === "engineer") {
-                return true;
-            } else {
-                return false;
-            }
-        }
+        message: "What is your engineer's name?"
+        // validate: (name) => {
+        //     if (!name) {
+        //         console.log("must enter a name");
+        //         return false;
+        //     } else {
+        //         return true;
+        //     }
+        // },
+        // when: ({ membertype }) => {
+        //     if (membertype === "engineer") {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
 
-    },
-    {
-        type: "input",
-        name: "engineerID",
-        message: "What is your team engineer's ID?",
-        validate: (id) => {
-            if (!id) {
-                console.log("must enter a id");
-                return false;
-            } else {
-                return true;
-            }
-        },
-        when: ({ membertype }) => {
-            if (membertype === "engineer") {
-                return true;
-            } else {
-                return false;
-            }
-        }
     },
     {
 
         type: "input",
         name: "engineerEmail",
-        message: "What is your team engineer's email?",
-        validate: (email) => {
-            if (!email) {
-                console.log("must enter a email");
-                return false;
-            } else {
-                return true;
-            }
-        },
-        when: ({ membertype }) => {
-            if (membertype === "engineer") {
-                return true;
-            } else {
-                return false;
-            }
-        }
+        message: "What is your team engineer's email?"
+        // validate: (email) => {
+        //     if (!email) {
+        //         console.log("must enter a email");
+        //         return false;
+        //     } else {
+        //         return true;
+        //     }
+        // },
+        // when: ({ membertype }) => {
+        //     if (membertype === "engineer") {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+    },
+    {
+        type: "input",
+        name: "engineerID",
+        message: "What is your team engineer's ID?"
+        // validate: (id) => {
+        //     if (!id) {
+        //         console.log("must enter a id");
+        //         return false;
+        //     } else {
+        //         return true;
+        //     }
+        // },
+        // when: ({ membertype }) => {
+        //     if (membertype === "engineer") {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
     },
     {
 
         type: "input",
         name: "engineerGitHub",
-        message: "What is your engineer's github?",
-        validate: (github) => {
-            if (!github) {
-                console.log("must enter a github");
-                return false;
-            } else {
-                return true;
-            }
-        },
-        when: ({ membertype }) => {
-            if (membertype === "engineer") {
-                return true;
-            } else {
-                return false;
-            }
-        }
+        message: "What is your engineer's github?"
+        //     validate: (github) => {
+        //         if (!github) {
+        //             console.log("must enter a github");
+        //             return false;
+        //         } else {
+        //             return true;
+        //         }
+        //     },
+        //     when: ({ membertype }) => {
+        //         if (membertype === "engineer") {
+        //             return true;
+        //         } else {
+        //             return false;
+        //         }
+        //     }
     }
 ];
 
@@ -128,85 +128,85 @@ const internQuestions = [
 
         type: "input",
         name: "internName",
-        message: "What is your intern's name?",
-        validate: (name) => {
-            if (!name) {
-                console.log("must enter a name");
-                return false;
-            } else {
-                return true;
-            }
-        },
-        when: ({ membertype }) => {
-            if (membertype === "intern") {
-                return true;
-            } else {
-                return false;
-            }
-        }
+        message: "What is your intern's name?"
+        // validate: (name) => {
+        //     if (!name) {
+        //         console.log("must enter a name");
+        //         return false;
+        //     } else {
+        //         return true;
+        //     }
+        // },
+        // when: ({ membertype }) => {
+        //     if (membertype === "intern") {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
 
-    },
-    {
-        type: "input",
-        name: "internID",
-        message: "What is your intern's ID?",
-        validate: (id) => {
-            if (!id) {
-                console.log("must enter a ID");
-                return false;
-            } else {
-                return true;
-            }
-        },
-        when: ({ membertype }) => {
-            if (membertype === "intern") {
-                return true;
-            } else {
-                return false;
-            }
-        }
     },
     {
 
         type: "input",
         name: "internEmail",
-        message: "What is your team intern's email?",
-        validate: (email) => {
-            if (!email) {
-                console.log("must enter a email");
-                return false;
-            } else {
-                return true;
-            }
-        },
-        when: ({ membertype }) => {
-            if (membertype === "intern") {
-                return true;
-            } else {
-                return false;
-            }
-        }
+        message: "What is your team intern's email?"
+        // validate: (email) => {
+        //     if (!email) {
+        //         console.log("must enter a email");
+        //         return false;
+        //     } else {
+        //         return true;
+        //     }
+        // },
+        // when: ({ membertype }) => {
+        //     if (membertype === "intern") {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+    },
+    {
+        type: "input",
+        name: "internID",
+        message: "What is your intern's ID?"
+        // validate: (id) => {
+        //     if (!id) {
+        //         console.log("must enter a ID");
+        //         return false;
+        //     } else {
+        //         return true;
+        //     }
+        // },
+        // when: ({ membertype }) => {
+        //     if (membertype === "intern") {
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
     },
     {
 
         type: "input",
         name: "internSchool",
-        message: "What school did your intern's attend?",
-        validate: (school) => {
-            if (!school) {
-                console.log("must enter a school");
-                return false;
-            } else {
-                return true;
-            }
-        },
-        when: ({ membertype }) => {
-            if (membertype === "intern") {
-                return true;
-            } else {
-                return false;
-            }
-        }
+        message: "What school did your intern's attend?"
+        //     validate: (school) => {
+        //         if (!school) {
+        //             console.log("must enter a school");
+        //             return false;
+        //         } else {
+        //             return true;
+        //         }
+        //     },
+        //     when: ({ membertype }) => {
+        //         if (membertype === "intern") {
+        //             return true;
+        //         } else {
+        //             return false;
+        //         }
+        //     }
     }
 ];
 
@@ -230,6 +230,7 @@ function basePrompts() {
                 break;
             case "intern":
                 internPrompts();
+                break;
             default:
                 const generated = generateTeam(teamArray);
                 console.log(teamArray);
@@ -242,19 +243,19 @@ function basePrompts() {
 }
 
 function managerPrompts() {
-    inquirer.prompt(managerQestions).then(function ({ name, email, id, officeNumber }) {
+    inquirer.prompt(managerQuestions).then(function ({ name, email, id, officeNumber }) {
         teamArray.push(new Manager(name, email, id, officeNumber));
         basePrompts();
     });
 }
 function engineerPrompts() {
-    inquirer.prompt(engineerQestions).then(function ({ name, email, id, github }) {
+    inquirer.prompt(engineerQuestions).then(function ({ name, email, id, github }) {
         teamArray.push(new Engineer(name, email, id, github));
         basePrompts();
     });
 }
 function internPrompts() {
-    inquirer.prompt(internQestions).then(function ({ name, email, id, school }) {
+    inquirer.prompt(internQuestions).then(function ({ name, email, id, school }) {
         teamArray.push(new Intern(name, email, id, school));
         basePrompts();
     });
