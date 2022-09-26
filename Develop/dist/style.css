@@ -32,7 +32,9 @@ h1 {
   }
   
  
-  .row {margin: 0 -5px;}
+  .row {margin: 0 -5px;
+    align-items: center;
+  }
   
  
   .row:after {

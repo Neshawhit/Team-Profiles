@@ -249,14 +249,14 @@ function managerPrompts() {
     });
 }
 function engineerPrompts() {
-    inquirer.prompt(engineerQuestions).then(function ({ name, email, id, github }) {
-        teamArray.push(new Engineer(name, email, id, github));
+    inquirer.prompt(engineerQuestions).then(function ({ engineerName, engineerEmail, engineerID, engineerGitHub }) {
+        teamArray.push(new Engineer(engineerName, engineerEmail, engineerID, engineerGitHub));
         basePrompts();
     });
 }
 function internPrompts() {
-    inquirer.prompt(internQuestions).then(function ({ name, email, id, school }) {
-        teamArray.push(new Intern(name, email, id, school));
+    inquirer.prompt(internQuestions).then(function ({ internName, internEmail, internID, internSchool }) {
+        teamArray.push(new Intern(internName, internEmail, internID, internSchool));
         basePrompts();
     });
 }

@@ -7,7 +7,7 @@ const generateTeam = team => {
         return `
     <div class="row">
         <div class="column">
-            <div class="manager card"> >
+            <div class="manager card"> 
                 <div>
                     <h2>${manager.getName()}</h2>
                     <h3>
@@ -29,14 +29,14 @@ const generateTeam = team => {
                 </div>
             </div>
         </div>
-    </div> 
+   
         `;
     };
 
     // create the html for engineers
     const generateEngineer = engineer => {
         return `
-    <div class="row">
+   
         <div class="column">
             <div class="engineer card">
                 <div>
@@ -59,7 +59,7 @@ const generateTeam = team => {
                 </div>
             </div>
         </div>
-    </div>
+   
         `;
     };
 
@@ -67,7 +67,6 @@ const generateTeam = team => {
     const generateIntern = intern => {
         return `
         
-    <div class="row">
         <div class="column">
             <div class="intern card">
                 <div>
@@ -85,7 +84,7 @@ const generateTeam = team => {
                 </div>
             </div>
         </div>
-    </div>
+    
         `;
     };
 
